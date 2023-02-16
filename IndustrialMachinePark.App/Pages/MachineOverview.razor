@@ -1,0 +1,37 @@
+﻿@page "/machineoverview/"
+
+
+<h3>Machine Overview</h3>
+
+
+
+@if (Machines == null)
+{
+		<p><em>Loading... </em></p>
+}
+else
+{
+
+	<table class="table table-light">
+		<thead class="table-primary">
+			<tr>
+				<th></th>
+				<th>Machine ID</th>
+				<th>Machine Name</th>
+				<th>Owner</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var machine in Machines)
+			{
+					<tr>
+						<td></td>
+						<td>@machine.ID</td>
+						<td>@machine.MachineName</td>
+						<td>@machine.Owner</td>
+					</tr>
+			}
+
+		</tbody> 
+	</table>	
+}
